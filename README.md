@@ -71,8 +71,8 @@ var Gomematic = require('gomematic');
 
 
 var api = new Gomematic.AuthApi()
-var auth = new Gomematic.InlineObject(); // {InlineObject} 
-api.loginUser(auth).then(function(data) {
+var params = new Gomematic.AuthLogin(); // {AuthLogin} The credentials to authenticate
+api.loginUser(params).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -113,20 +113,37 @@ Class | Method | HTTP request | Description
 
 ## Documentation for models
 
+ - [Gomematic.AuthLogin](docs/AuthLogin.md)
  - [Gomematic.AuthToken](docs/AuthToken.md)
  - [Gomematic.AuthVerify](docs/AuthVerify.md)
- - [Gomematic.InlineObject](docs/InlineObject.md)
+ - [Gomematic.GeneralError](docs/GeneralError.md)
  - [Gomematic.Profile](docs/Profile.md)
  - [Gomematic.Team](docs/Team.md)
  - [Gomematic.TeamUser](docs/TeamUser.md)
  - [Gomematic.TeamUserParams](docs/TeamUserParams.md)
  - [Gomematic.User](docs/User.md)
  - [Gomematic.UserTeamParams](docs/UserTeamParams.md)
+ - [Gomematic.ValidationError](docs/ValidationError.md)
+ - [Gomematic.ValidationErrorErrors](docs/ValidationErrorErrors.md)
 
 
 ## Documentation for authorization
 
-All endpoints do not require authorization.
+
+
+### BasicAuth
+
+- **Type**: HTTP basic authentication
+
+
+
+### HeaderAuth
+
+
+- **Type**: API key
+- **API key parameter name**: X-API-Key
+- **Location**: HTTP header
+
 
 
 ## Security

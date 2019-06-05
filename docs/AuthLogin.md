@@ -1,4 +1,4 @@
-# Gomematic.InlineObject
+# Gomematic.AuthLogin
 
 ## Properties
 
