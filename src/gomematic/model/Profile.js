@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient'
+import TeamUser from './TeamUser'
 
 /**
  * The Profile model module.
@@ -22,11 +23,9 @@ class Profile {
   /**
      * Constructs a new <code>Profile</code>.
      * @alias module:gomematic/model/Profile
-     * @param username {String}
-     * @param email {String}
      */
-  constructor (username, email) {
-    Profile.initialize(this, username, email)
+  constructor () {
+    Profile.initialize(this)
   }
 
   /**
@@ -34,9 +33,7 @@ class Profile {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-  static initialize (obj, username, email) {
-    obj['username'] = username
-    obj['email'] = email
+  static initialize (obj) {
   }
 
   /**
@@ -76,6 +73,9 @@ class Profile {
       }
       if (data.hasOwnProperty('updated_at')) {
         obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date')
+      }
+      if (data.hasOwnProperty('teams')) {
+        obj['teams'] = ApiClient.convertToType(data['teams'], [TeamUser])
       }
     }
     return obj
@@ -126,5 +126,10 @@ Profile.prototype['created_at'] = undefined
  * @member {Date} updated_at
  */
 Profile.prototype['updated_at'] = undefined
+
+/**
+ * @member {Array.<module:gomematic/model/TeamUser>} teams
+ */
+Profile.prototype['teams'] = undefined
 
 export default Profile

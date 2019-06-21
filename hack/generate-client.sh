@@ -22,7 +22,8 @@ docker run --rm \
 	-i ${SPEC} \
 	-o /generate \
 	-t /generate/hack/openapi/templates \
-	--strict-spec true
+	--strict-spec true \
+	--skip-validate-spec
 
 pushd ${ROOT}
 	yarn install

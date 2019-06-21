@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**loginUser**](AuthApi.md#loginUser) | **POST** /auth/login | Authenticate an user by credentials
 [**refreshAuth**](AuthApi.md#refreshAuth) | **GET** /auth/refresh | Refresh an auth token before it expires
-[**verifyAuth**](AuthApi.md#verifyAuth) | **GET** /auth/verify/{token} | Verify validity for an authentication token
+[**verifyAuth**](AuthApi.md#verifyAuth) | **GET** /auth/verify | Verify validity for an authentication token
 
 
 
@@ -20,6 +20,16 @@ Authenticate an user by credentials
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.AuthApi();
 let authLogin = new Gomematic.AuthLogin(); // AuthLogin | The credentials to authenticate
@@ -44,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -62,6 +72,16 @@ Refresh an auth token before it expires
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.AuthApi();
 apiInstance.refreshAuth().then((data) => {
@@ -82,7 +102,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -92,7 +112,7 @@ No authorization required
 
 ## verifyAuth
 
-> AuthVerify verifyAuth(token)
+> AuthVerify verifyAuth()
 
 Verify validity for an authentication token
 
@@ -100,10 +120,19 @@ Verify validity for an authentication token
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.AuthApi();
-let token = "token_example"; // String | A token that have to be checked
-apiInstance.verifyAuth(token).then((data) => {
+apiInstance.verifyAuth().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -113,10 +142,7 @@ apiInstance.verifyAuth(token).then((data) => {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **token** | **String**| A token that have to be checked | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -124,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 

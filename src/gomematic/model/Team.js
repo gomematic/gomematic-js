@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient'
+import TeamUser from './TeamUser'
 
 /**
  * The Team model module.
@@ -22,10 +23,9 @@ class Team {
   /**
      * Constructs a new <code>Team</code>.
      * @alias module:gomematic/model/Team
-     * @param name {String}
      */
-  constructor (name) {
-    Team.initialize(this, name)
+  constructor () {
+    Team.initialize(this)
   }
 
   /**
@@ -33,8 +33,7 @@ class Team {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-  static initialize (obj, name) {
-    obj['name'] = name
+  static initialize (obj) {
   }
 
   /**
@@ -62,6 +61,9 @@ class Team {
       }
       if (data.hasOwnProperty('updated_at')) {
         obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date')
+      }
+      if (data.hasOwnProperty('users')) {
+        obj['users'] = ApiClient.convertToType(data['users'], [TeamUser])
       }
     }
     return obj
@@ -92,5 +94,10 @@ Team.prototype['created_at'] = undefined
  * @member {Date} updated_at
  */
 Team.prototype['updated_at'] = undefined
+
+/**
+ * @member {Array.<module:gomematic/model/TeamUser>} users
+ */
+Team.prototype['users'] = undefined
 
 export default Team

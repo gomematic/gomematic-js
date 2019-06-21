@@ -64,7 +64,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = GeneralError
@@ -109,7 +109,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = User
@@ -154,7 +154,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = GeneralError
@@ -204,7 +204,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = GeneralError
@@ -250,7 +250,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = [TeamUser]
@@ -289,7 +289,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = [User]
@@ -338,7 +338,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = GeneralError
@@ -384,7 +384,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = User
@@ -434,7 +434,7 @@ export default class UserApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = User

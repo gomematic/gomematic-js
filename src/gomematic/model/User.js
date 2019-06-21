@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient'
+import TeamUser from './TeamUser'
 
 /**
  * The User model module.
@@ -22,11 +23,9 @@ class User {
   /**
      * Constructs a new <code>User</code>.
      * @alias module:gomematic/model/User
-     * @param username {String}
-     * @param email {String}
      */
-  constructor (username, email) {
-    User.initialize(this, username, email)
+  constructor () {
+    User.initialize(this)
   }
 
   /**
@@ -34,9 +33,7 @@ class User {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-  static initialize (obj, username, email) {
-    obj['username'] = username
-    obj['email'] = email
+  static initialize (obj) {
   }
 
   /**
@@ -76,6 +73,9 @@ class User {
       }
       if (data.hasOwnProperty('updated_at')) {
         obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date')
+      }
+      if (data.hasOwnProperty('teams')) {
+        obj['teams'] = ApiClient.convertToType(data['teams'], [TeamUser])
       }
     }
     return obj
@@ -126,5 +126,10 @@ User.prototype['created_at'] = undefined
  * @member {Date} updated_at
  */
 User.prototype['updated_at'] = undefined
+
+/**
+ * @member {Array.<module:gomematic/model/TeamUser>} teams
+ */
+User.prototype['teams'] = undefined
 
 export default User

@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient'
+import Team from './Team'
+import User from './User'
 
 /**
  * The TeamUser model module.
@@ -55,11 +57,23 @@ class TeamUser {
       if (data.hasOwnProperty('team_id')) {
         obj['team_id'] = ApiClient.convertToType(data['team_id'], 'String')
       }
+      if (data.hasOwnProperty('team')) {
+        obj['team'] = Team.constructFromObject(data['team'])
+      }
       if (data.hasOwnProperty('user_id')) {
         obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String')
       }
+      if (data.hasOwnProperty('user')) {
+        obj['user'] = User.constructFromObject(data['user'])
+      }
       if (data.hasOwnProperty('perm')) {
         obj['perm'] = ApiClient.convertToType(data['perm'], 'String')
+      }
+      if (data.hasOwnProperty('created_at')) {
+        obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date')
+      }
+      if (data.hasOwnProperty('updated_at')) {
+        obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date')
       }
     }
     return obj
@@ -72,14 +86,34 @@ class TeamUser {
 TeamUser.prototype['team_id'] = undefined
 
 /**
+ * @member {module:gomematic/model/Team} team
+ */
+TeamUser.prototype['team'] = undefined
+
+/**
  * @member {String} user_id
  */
 TeamUser.prototype['user_id'] = undefined
 
 /**
+ * @member {module:gomematic/model/User} user
+ */
+TeamUser.prototype['user'] = undefined
+
+/**
  * @member {module:gomematic/model/TeamUser.PermEnum} perm
  */
 TeamUser.prototype['perm'] = undefined
+
+/**
+ * @member {Date} created_at
+ */
+TeamUser.prototype['created_at'] = undefined
+
+/**
+ * @member {Date} updated_at
+ */
+TeamUser.prototype['updated_at'] = undefined
 
 /**
  * Allowed values for the <code>perm</code> property.

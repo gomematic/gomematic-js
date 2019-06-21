@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **String** |  | 
-**createdAt** | **Date** |  | 
+**createdAt** | **Date** |  | [optional] 
 
 

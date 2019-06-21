@@ -57,7 +57,7 @@ export default class AuthApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = AuthToken
@@ -96,7 +96,7 @@ export default class AuthApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = AuthToken
@@ -120,18 +120,12 @@ export default class AuthApi {
 
   /**
      * Verify validity for an authentication token
-     * @param {String} token A token that have to be checked
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:gomematic/model/AuthVerify} and HTTP response
      */
-  verifyAuthWithHttpInfo (token) {
+  verifyAuthWithHttpInfo () {
     let postBody = null
-    // verify the required parameter 'token' is set
-    if (token === undefined || token === null) {
-      throw new Error("Missing the required parameter 'token' when calling verifyAuth")
-    }
 
     let pathParams = {
-      'token': token
     }
     let queryParams = {
     }
@@ -140,12 +134,12 @@ export default class AuthApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = AuthVerify
     return this.apiClient.callApi(
-      '/auth/verify/{token}', 'GET',
+      '/auth/verify', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType, null
     )
@@ -153,11 +147,10 @@ export default class AuthApi {
 
   /**
      * Verify validity for an authentication token
-     * @param {String} token A token that have to be checked
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:gomematic/model/AuthVerify}
      */
-  verifyAuth (token) {
-    return this.verifyAuthWithHttpInfo(token)
+  verifyAuth () {
+    return this.verifyAuthWithHttpInfo()
       .then(function (responseAndData) {
         return responseAndData.data
       })

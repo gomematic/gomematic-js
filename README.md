@@ -68,6 +68,16 @@ Please follow the [installation](#installation) instructions and then run the fo
 ```javascript
 var Gomematic = require('gomematic');
 
+var defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+var Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME'
+Basic.password = 'YOUR PASSWORD'
+// Configure API key authorization: Header
+var Header = defaultClient.authentications['Header'];
+Header.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix['X-API-Key'] = "Token"
 
 var api = new Gomematic.AuthApi()
 var authLogin = new Gomematic.AuthLogin(); // {AuthLogin} The credentials to authenticate
@@ -86,10 +96,10 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Gomematic.AuthApi* | [**loginUser**](docs/AuthApi.md#loginUser) | **POST** /auth/login | Authenticate an user by credentials
 *Gomematic.AuthApi* | [**refreshAuth**](docs/AuthApi.md#refreshAuth) | **GET** /auth/refresh | Refresh an auth token before it expires
-*Gomematic.AuthApi* | [**verifyAuth**](docs/AuthApi.md#verifyAuth) | **GET** /auth/verify/{token} | Verify validity for an authentication token
-*Gomematic.ProfileApi* | [**showProfile**](docs/ProfileApi.md#showProfile) | **GET** /profile/self | Retrieve an unlimited auth token
+*Gomematic.AuthApi* | [**verifyAuth**](docs/AuthApi.md#verifyAuth) | **GET** /auth/verify | Verify validity for an authentication token
+*Gomematic.ProfileApi* | [**showProfile**](docs/ProfileApi.md#showProfile) | **GET** /profile/self | Fetch profile details of the personal account
 *Gomematic.ProfileApi* | [**tokenProfile**](docs/ProfileApi.md#tokenProfile) | **GET** /profile/token | Retrieve an unlimited auth token
-*Gomematic.ProfileApi* | [**updateProfile**](docs/ProfileApi.md#updateProfile) | **PUT** /profile/self | Retrieve an unlimited auth token
+*Gomematic.ProfileApi* | [**updateProfile**](docs/ProfileApi.md#updateProfile) | **PUT** /profile/self | Update your own profile information
 *Gomematic.TeamApi* | [**appendTeamToUser**](docs/TeamApi.md#appendTeamToUser) | **POST** /teams/{team_id}/users | Assign a user to team
 *Gomematic.TeamApi* | [**createTeam**](docs/TeamApi.md#createTeam) | **POST** /teams | Create a new team
 *Gomematic.TeamApi* | [**deleteTeam**](docs/TeamApi.md#deleteTeam) | **DELETE** /teams/{team_id} | Delete a specific team
@@ -130,13 +140,13 @@ Class | Method | HTTP request | Description
 
 
 
-### BasicAuth
+### Basic
 
 - **Type**: HTTP basic authentication
 
 
 
-### HeaderAuth
+### Header
 
 
 - **Type**: API key

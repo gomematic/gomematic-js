@@ -26,6 +26,16 @@ Assign a team to user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -52,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -70,6 +80,16 @@ Create a new user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let user = new Gomematic.User(); // User | The user data to create
@@ -94,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -112,6 +132,16 @@ Delete a specific user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -136,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -154,6 +184,16 @@ Remove a team from user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -180,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -198,6 +238,16 @@ Fetch all teams assigned to user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -222,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -240,6 +290,16 @@ Fetch all available users
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 apiInstance.listUsers().then((data) => {
@@ -260,7 +320,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -278,6 +338,16 @@ Update team perms for user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -304,7 +374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -322,6 +392,16 @@ Fetch a specific user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -346,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -364,6 +444,16 @@ Update a specific user
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.UserApi();
 let userId = "userId_example"; // String | A user UUID or slug
@@ -390,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 

@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token** | **String** |  | 
-**expiresAt** | **Date** |  | 
+**expiresAt** | **Date** |  | [optional] 
 
 

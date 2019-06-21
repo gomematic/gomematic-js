@@ -59,14 +59,38 @@
       // expect(instance).to.be();
     })
 
+    it('should have the property team (base name: "team")', function () {
+      // uncomment below and update the code to test the property team
+      // var instane = new Gomematic.TeamUser();
+      // expect(instance).to.be();
+    })
+
     it('should have the property userId (base name: "user_id")', function () {
       // uncomment below and update the code to test the property userId
       // var instane = new Gomematic.TeamUser();
       // expect(instance).to.be();
     })
 
+    it('should have the property user (base name: "user")', function () {
+      // uncomment below and update the code to test the property user
+      // var instane = new Gomematic.TeamUser();
+      // expect(instance).to.be();
+    })
+
     it('should have the property perm (base name: "perm")', function () {
       // uncomment below and update the code to test the property perm
+      // var instane = new Gomematic.TeamUser();
+      // expect(instance).to.be();
+    })
+
+    it('should have the property createdAt (base name: "created_at")', function () {
+      // uncomment below and update the code to test the property createdAt
+      // var instane = new Gomematic.TeamUser();
+      // expect(instance).to.be();
+    })
+
+    it('should have the property updatedAt (base name: "updated_at")', function () {
+      // uncomment below and update the code to test the property updatedAt
       // var instane = new Gomematic.TeamUser();
       // expect(instance).to.be();
     })

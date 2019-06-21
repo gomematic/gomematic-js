@@ -23,10 +23,9 @@ class AuthVerify {
      * Constructs a new <code>AuthVerify</code>.
      * @alias module:gomematic/model/AuthVerify
      * @param username {String}
-     * @param createdAt {Date}
      */
-  constructor (username, createdAt) {
-    AuthVerify.initialize(this, username, createdAt)
+  constructor (username) {
+    AuthVerify.initialize(this, username)
   }
 
   /**
@@ -34,9 +33,8 @@ class AuthVerify {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-  static initialize (obj, username, createdAt) {
+  static initialize (obj, username) {
     obj['username'] = username
-    obj['created_at'] = createdAt
   }
 
   /**

@@ -40,8 +40,8 @@ class ApiClient {
          * @type {Array.<String>}
          */
     this.authentications = {
-      'BasicAuth': { type: 'basic' },
-      'HeaderAuth': { type: 'apiKey', 'in': 'header', name: 'X-API-Key' }
+      'Basic': { type: 'basic' },
+      'Header': { type: 'apiKey', 'in': 'header', name: 'X-API-Key' }
     }
 
     /**

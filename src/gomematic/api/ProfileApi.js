@@ -37,7 +37,7 @@ export default class ProfileApi {
   }
 
   /**
-     * Retrieve an unlimited auth token
+     * Fetch profile details of the personal account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:gomematic/model/Profile} and HTTP response
      */
   showProfileWithHttpInfo () {
@@ -52,7 +52,7 @@ export default class ProfileApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = Profile
@@ -64,7 +64,7 @@ export default class ProfileApi {
   }
 
   /**
-     * Retrieve an unlimited auth token
+     * Fetch profile details of the personal account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:gomematic/model/Profile}
      */
   showProfile () {
@@ -90,7 +90,7 @@ export default class ProfileApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = []
     let accepts = ['application/json']
     let returnType = AuthToken
@@ -113,7 +113,7 @@ export default class ProfileApi {
   }
 
   /**
-     * Retrieve an unlimited auth token
+     * Update your own profile information
      * @param {module:gomematic/model/Profile} profile The profile data to update
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:gomematic/model/Profile} and HTTP response
      */
@@ -133,7 +133,7 @@ export default class ProfileApi {
     let formParams = {
     }
 
-    let authNames = []
+    let authNames = ['Basic', 'Header']
     let contentTypes = ['application/json']
     let accepts = ['application/json']
     let returnType = Profile
@@ -145,7 +145,7 @@ export default class ProfileApi {
   }
 
   /**
-     * Retrieve an unlimited auth token
+     * Update your own profile information
      * @param {module:gomematic/model/Profile} profile The profile data to update
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:gomematic/model/Profile}
      */

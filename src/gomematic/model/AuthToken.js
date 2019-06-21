@@ -23,10 +23,9 @@ class AuthToken {
      * Constructs a new <code>AuthToken</code>.
      * @alias module:gomematic/model/AuthToken
      * @param token {String}
-     * @param expiresAt {Date}
      */
-  constructor (token, expiresAt) {
-    AuthToken.initialize(this, token, expiresAt)
+  constructor (token) {
+    AuthToken.initialize(this, token)
   }
 
   /**
@@ -34,9 +33,8 @@ class AuthToken {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-  static initialize (obj, token, expiresAt) {
+  static initialize (obj, token) {
     obj['token'] = token
-    obj['expires_at'] = expiresAt
   }
 
   /**

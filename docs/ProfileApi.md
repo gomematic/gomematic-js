@@ -4,9 +4,9 @@ All URIs are relative to *http://try.gomematic.tech/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**showProfile**](ProfileApi.md#showProfile) | **GET** /profile/self | Retrieve an unlimited auth token
+[**showProfile**](ProfileApi.md#showProfile) | **GET** /profile/self | Fetch profile details of the personal account
 [**tokenProfile**](ProfileApi.md#tokenProfile) | **GET** /profile/token | Retrieve an unlimited auth token
-[**updateProfile**](ProfileApi.md#updateProfile) | **PUT** /profile/self | Retrieve an unlimited auth token
+[**updateProfile**](ProfileApi.md#updateProfile) | **PUT** /profile/self | Update your own profile information
 
 
 
@@ -14,12 +14,22 @@ Method | HTTP request | Description
 
 > Profile showProfile()
 
-Retrieve an unlimited auth token
+Fetch profile details of the personal account
 
 ### Example
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.ProfileApi();
 apiInstance.showProfile().then((data) => {
@@ -40,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -58,6 +68,16 @@ Retrieve an unlimited auth token
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.ProfileApi();
 apiInstance.tokenProfile().then((data) => {
@@ -78,7 +98,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
@@ -90,12 +110,22 @@ No authorization required
 
 > Profile updateProfile(profile)
 
-Retrieve an unlimited auth token
+Update your own profile information
 
 ### Example
 
 ```javascript
 import Gomematic from 'gomematic';
+let defaultClient = Gomematic.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+// Configure API key authorization: Header
+let Header = defaultClient.authentications['Header'];
+Header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Gomematic.ProfileApi();
 let profile = new Gomematic.Profile(); // Profile | The profile data to update
@@ -120,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic), [Header](../README.md#Header)
 
 ### HTTP request headers
 
